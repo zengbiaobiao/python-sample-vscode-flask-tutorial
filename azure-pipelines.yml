@@ -22,7 +22,14 @@ steps:
   displayName: 'Use Python $(python.version)'
 
 
+- task: PythonScript@0
+  displayName: 'execute python script'
+  inputs:
+    scriptSource: 'inline'
+    script: |
+      print('hahaha')
+      print('enenen...')
+    
 - script: |
-    print('hahaha')
-    print('enenen...')
+    echo 'Print Information here'
   displayName: 'Print Info'
